@@ -1,28 +1,18 @@
+#Napraviti generator funkcije za ispis svih parnih i
+#svih neparnih brojeva manjih od prosljeđenog parametra.
 
-def ispisi_unazad_verzija(string):
-    if len(string) == 0:
-        return
-    print(string[-1], end="")
+def parni(n):
+    for i in range(n):
+        if i % 2==0:
+            yield i
 
-  def ispisi_unazad_verzija1(string[:-1])
-def ispisi_unazad_verzija2(string):
+def neparni(n):
+    for i in range(n):
+        if i % 2==1:
+            yield i
 
-    if len(string) == 0:
-        return
-    ispisi_unazad_verzija2(string[1:])
-    print(string[0], end=
-          
-if __name__ == "__main__":
-    
-    unos_string = "SUM"
-    print(f"Originalni string: {unos_string}")
-    print("-" * 30)
-    
-    print("Ispis pomoću Verzije 1 (od kraja): ", end="")
-    ispisi_unazad_verzija1(unos_string)
-    print()  # Prazan ispis samo za prelazak u novi red
-    print("Ispis pomoću Verzije 2 (od početka): ", end="")
-    ispisi_unazad_verzija2(unos_string)
-    print()  # Prazan ispis samo za prelazak u novi red
-    
-    print("-" * 30)
+for i in parni(10):
+    print(i)
+
+for i in neparni(10):
+    print(i)
